@@ -39,6 +39,26 @@ public class ScoreCard {
         return (byte) rounds.size();
     }
 
+    public int getRedBoxerFinalScore() {
+        int totalScore = 0;
+
+        for (Round round : rounds) {
+            totalScore += round.getRedBoxerScore();
+        }
+
+        return totalScore;
+    }
+
+    public int getBlueBoxerFinalScore() {
+        int totalScore = 0;
+
+        for (Round round : rounds) {
+            totalScore += round.getBlueBoxerScore();
+        }
+
+        return totalScore;
+    }
+
     @Override
     public String toString() {
         StringBuilder text = new StringBuilder();
