@@ -27,6 +27,7 @@ build/
 !gradle/wrapper/gradle-wrapper.properties
 
 # --- VS CODE ---
+.github
 .vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
