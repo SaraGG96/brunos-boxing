@@ -9,6 +9,10 @@ public class RoundFactory {
 
         String normalizedScore = roundScore.replace(" ", "");
 
+        if (normalizedScore.equals("10-8,1") || normalizedScore.equals("1,8-10")) {
+            return new PointsDeducted(normalizedScore);
+        }
+
         if (normalizedScore.equals("10-8") || normalizedScore.equals("8-10")) {
             return new KnockdownRound(normalizedScore);
         }
