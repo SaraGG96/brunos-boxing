@@ -1,3 +1,5 @@
+package edu.teamrocket;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -42,6 +44,10 @@ public class ScoreCard {
         return (byte) rounds.size();
     }
 
+    public List<Round> getRounds() {
+        return rounds;
+    }
+
     public int getRedBoxerFinalScore() {
         int totalScore = 0;
 
@@ -84,4 +90,5 @@ public class ScoreCard {
 
         return text.toString();
     }
+
 }

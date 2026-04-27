@@ -1,3 +1,5 @@
+package edu.teamrocket;
+
 public class PointsDeducted implements Round {
 
     private String roundScore;

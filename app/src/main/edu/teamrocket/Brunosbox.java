@@ -1,7 +1,6 @@
+package edu.teamrocket;
 
-
-public class Brunosbox 
-{
+public class Brunosbox {
     public static void main( String[] args ) {
 
         System.out.println("\n - I see three of them out there." + 

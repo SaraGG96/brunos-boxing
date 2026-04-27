@@ -1,3 +1,5 @@
+package edu.teamrocket;
+
 public class RegularRound implements Round {
 
     private String roundScore;

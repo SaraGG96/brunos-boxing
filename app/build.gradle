@@ -32,6 +32,19 @@ java {
     }
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+
 application {
     // Define the main class for the application.
     mainClass = 'edu.teamrocket.Brunosbox'

@@ -1,3 +1,5 @@
+package edu.teamrocket;
+
 public interface Round {
 
     void boxerRoundScore();
