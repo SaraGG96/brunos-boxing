@@ -30,7 +30,10 @@ public class ScoreCard {
 
         Optional.ofNullable(judgeScoreCard).ifPresent(scoreCard -> {
             for (String roundScore : scoreCard) {
-                Optional.ofNullable(roundScore).ifPresent(score -> rounds.add(new RegularRound(score)));
+                Optional.ofNullable(roundScore).ifPresent(score -> {
+                    Round round = RoundFactory.getRound(score);
+                    Optional.ofNullable(round).ifPresent(rounds::add);
+                });
             }
         });
     }
