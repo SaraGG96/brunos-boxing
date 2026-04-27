@@ -62,14 +62,21 @@ public class ScoreCard {
     @Override
     public String toString() {
         StringBuilder text = new StringBuilder();
+        int redTotal = 0;
+        int blueTotal = 0;
+
         text.append("\n\t ").append(color).append(" SCORE CARD");
         text.append("\n\t Red corner: ").append(redCorner);
         text.append("\n\t Blue corner: ").append(blueCorner);
 
         for (int i = 0; i < rounds.size(); i++) {
             Round round = rounds.get(i);
+            redTotal += round.getRedBoxerScore();
+            blueTotal += round.getBlueBoxerScore();
+
             text.append("\n\t Round ").append(i + 1).append(": ");
             text.append(round.getRedBoxerScore()).append(" - ").append(round.getBlueBoxerScore());
+            text.append(" | Score total: ").append(redTotal).append(" - ").append(blueTotal);
         }
 
         return text.toString();
